@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas multimedia</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .content-box {
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #660018;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .form-container {
+            padding: 20px;
+            border: 1px solid #660018;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        body{
+            zoom:0.9;
+            background-color: #e8e8e8;
+        }
+
+        .bg-primary{
+            background-color: #660018 !important;
+            border-color: #660018 !important;
+        }
+
+        .btn-primary{
+            background-color: #660018 !important;
+            border-color: #660018 !important;
+            
+        }
+        .nav-link {
+            color: #660018;
+            background-color: #fff;
+            margin-right: 10px;
+        }
+
+        .nav-link.active {
+            color: #fff !important;
+            background-color: #660018 !important;
+        }
+
+        .nav-link:hover {
+            color: #fff !important;
+            background-color: #800020 !important;
+            
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h2>Sistemas multimedia</h2>
+    </header>
+
+    <div class="container mt-5">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="animacion" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Animacion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="video" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Video</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="visita" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Visita virtual</a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active content-box" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                <h3>Space travel</h3>
+                <video width="100%" height="400px" controls>
+                    <source src="Spacetravel.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+            <div class="tab-pane fade content-box" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                <h3>Samba do amigo</h3>
+                <video width="100%" height="400px" controls>
+                    <source src="Videoi.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+            <div class="tab-pane fade content-box" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                <h3>Contenido del Cuadro 3</h3>
+                <video width="100%" height="400px" controls>
+                    <source src="video3.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+        </div>
+        
+
+        <div class="mt-4">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#formCollapse" aria-expanded="false" aria-controls="formCollapse">
+                Contacto
+            </button>
+            <div class="collapse" id="formCollapse">
+                <div class="form-container mt-3">
+                    <h3>Formulario de Contacto</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Ingresa tu mensaje"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
