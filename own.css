@@ -1,0 +1,192 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    scroll-behavior: smooth;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(#444 1px, transparent 1px);
+    background-size: 10px 10px;
+    animation: moveBackground 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.saludo {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 20px 0;
+    color: #660018;
+}
+
+.banner {
+    background-image: url(fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    
+}
+
+.banner_saludo {
+    background-color: #660018;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    animation: bannerExpand 1s forwards;
+}
+
+@keyframes bannerExpand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.banner h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.banner .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.banner .nav-link {
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #800020;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.banner .nav-link:hover {
+    background-color: #a00028;
+}
+
+.section {
+    padding: 50px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    z-index: 1;
+}
+
+.section h3 {
+    margin-bottom: 20px;
+}
+
+.section p {
+    margin-bottom: 40px;
+}
+
+.video-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    color: #000;
+    z-index: 1;
+}
+
+.contact-section {
+    padding: 50px 20px;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.card {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f4f4f9;
+    z-index: 1;
+}
+
+.card-animacion {
+    background-color: #6c757d;
+    
+}
+
+.card-video {
+    background-color: #007bff;
+}
+
+.card-visita {
+    background-color: #28a745;
+}
+
+.card-contacto {
+    background-color: #17a2b8;
+}
+
+.btn-primary {
+    background-color: #660018 !important;
+    border-color: #660018 !important;
+}
+
+.btn-primary:hover {
+    background-color: #800020 !important;
+    border-color: #800020 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #660018;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    z-index: 1;
+}
+
+.back-to-top:hover {
+    background-color: #800020;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+}

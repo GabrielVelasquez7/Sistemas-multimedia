@@ -3,131 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistemas multimedia</title>
+    <title>Sistemas Multimedia</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="own.css" rel="stylesheet">
     <style>
-        .content-box {
-            padding: 20px;
-            margin-top: 20px;
-            border: 1px solid #660018;
-            border-radius: 4px;
-            background-color: #fff;
-        }
-        .form-container {
-            padding: 20px;
-            border: 1px solid #660018;
-            border-radius: 4px;
-            background-color: #fff;
-        }
-
-        body{
-            zoom:0.9;
-            background-color: #e8e8e8;
-        }
-
-        .bg-primary{
-            background-color: #660018 !important;
-            border-color: #660018 !important;
-        }
-
-        .btn-primary{
-            background-color: #660018 !important;
-            border-color: #660018 !important;
-            
-        }
-        .nav-link {
-            color: #660018;
-            background-color: #fff;
-            margin-right: 10px;
-        }
-
-        .nav-link.active {
-            color: #fff !important;
-            background-color: #660018 !important;
-        }
-
-        .nav-link:hover {
-            color: #fff !important;
-            background-color: #800020 !important;
-            
-        }
+        /* Aquí puedes añadir más estilos si lo necesitas */
     </style>
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-3">
-        <h2>Sistemas multimedia</h2>
-    </header>
+
+    <div class="animated-background"></div>
+
+    <div class="saludo banner_saludo">¡Bienvenido a nuestro sitio web!</div>
+
+    <div class="banner" id="top">
+        <h1>Sistemas Multimedia</h1>
+        <p>Explora el fascinante mundo de la animación, video y visitas virtuales. Conoce más sobre cómo los sistemas multimedia transforman la manera en que experimentamos el contenido digital.</p>
+        <div class="nav-links">
+            <a href="#animacion" class="nav-link">Animación</a>
+            <a href="#video" class="nav-link">Video</a>
+            <a href="#visita" class="nav-link">Visita Virtual</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </div>
+    </div>
 
     <div class="container mt-5">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="animacion" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Animacion</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="video" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Video</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="visita" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Visita virtual</a>
-            </li>
 
-        </ul>
-
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active content-box" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                <h3>Space travel</h3>
+        <div class="card card-animacion" id="animacion">
+            <h3><i class="fas fa-play"></i> Animación</h3>
+            <p>Explora el fascinante mundo de la animación. Aquí encontrarás contenido multimedia relacionado con viajes espaciales.</p>
+            <div class="video-container">
                 <video width="100%" height="400px" controls>
                     <source src="Spacetravel.mp4" type="video/mp4">
                     Tu navegador no soporta la etiqueta de video.
                 </video>
             </div>
-            <div class="tab-pane fade content-box" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                <h3>Samba do amigo</h3>
+        </div>
+
+        <div class="card card-video" id="video">
+            <h3><i class="fas fa-video"></i> Video</h3>
+            <p>Sumérgete en nuestro contenido de video. Disfruta de la vibrante música de "Samba do Amigo".</p>
+            <div class="video-container">
                 <video width="100%" height="400px" controls>
                     <source src="Videoi.mp4" type="video/mp4">
                     Tu navegador no soporta la etiqueta de video.
                 </video>
             </div>
-            <div class="tab-pane fade content-box" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-                <h3>Contenido del Cuadro 3</h3>
+        </div>
+
+        <div class="card card-visita" id="visita">
+            <h3><i class="fas fa-vr-cardboard"></i> Visita Virtual</h3>
+            <p>Realiza una visita virtual a lugares increíbles. Aquí puedes encontrar un tour virtual interactivo.</p>
+            <div class="video-container">
                 <video width="100%" height="400px" controls>
                     <source src="video3.mp4" type="video/mp4">
                     Tu navegador no soporta la etiqueta de video.
                 </video>
             </div>
         </div>
-        
 
-        <div class="mt-4">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#formCollapse" aria-expanded="false" aria-controls="formCollapse">
-                Contacto
-            </button>
-            <div class="collapse" id="formCollapse">
-                <div class="form-container mt-3">
-                    <h3>Formulario de Contacto</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea class="form-control" id="message" rows="3" placeholder="Ingresa tu mensaje"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </form>
+        <div class="card card-contacto contact-section" id="contacto">
+            <h3><i class="fas fa-paper-plane"></i> Formulario de Contacto</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" required>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Ingresa tu mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
         </div>
     </div>
-    <br> <br>
 
+    <a href="#top" class="back-to-top"><i class="fas fa-arrow-up"></i> Volver arriba</a>
+
+    <div class="footer">
+        <p>&copy; 2024 Sistemas Multimedia. Todos los derechos reservados.</p>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario tradicional
+    
+            // Recolecta los datos del formulario
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+    
+            // Envía los datos a Google Sheets
+            fetch('https://script.google.com/macros/s/AKfycbwoJNhq9J-crHfSbuY-L_roDJffmflDuWIX459x085osI2cvXeHx7HRwR63PxnbpkQwcQ/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    message: message
+                })
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert('¡Formulario enviado con éxito!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+    
 </body>
 </html>
