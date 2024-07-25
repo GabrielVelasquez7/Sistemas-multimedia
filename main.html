@@ -8,31 +8,45 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="own.css" rel="stylesheet">
     <style>
-        /* Aquí puedes añadir más estilos si lo necesitas */
+        .fade {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .fade.show {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
 
     <div class="animated-background"></div>
 
-    <div class="saludo banner_saludo">¡Bienvenido a nuestro sitio web!</div>
+    <div class="saludo banner_saludo">¡Bienvenido a la era multimedia!</div>
 
     <div class="banner" id="top">
         <h1>Sistemas Multimedia</h1>
         <p>Explora el fascinante mundo de la animación, video y visitas virtuales. Conoce más sobre cómo los sistemas multimedia transforman la manera en que experimentamos el contenido digital.</p>
         <div class="nav-links">
-            <a href="#animacion" class="nav-link">Animación</a>
-            <a href="#video" class="nav-link">Video</a>
-            <a href="#visita" class="nav-link">Visita Virtual</a>
-            <a href="#contacto" class="nav-link">Contacto</a>
+            <a href="#animacion" class="nav-link" onclick="showSection('animacion')">Animación</a>
+            <a href="#video" class="nav-link" onclick="showSection('video')">Video</a>
+            <a href="#visita" class="nav-link" onclick="showSection('visita')">Visita Virtual</a>
+            <a href="#contacto" class="nav-link" onclick="showSection('contacto')">Contacto</a>
         </div>
+        <button class="btn btn-secondary mt-3" onclick="showAllSections()">Mostrar Todos</button>
     </div>
 
     <div class="container mt-5">
 
-        <div class="card card-animacion" id="animacion">
+        <div class="card card-animacion fade" id="animacion">
             <h3><i class="fas fa-play"></i> Animación</h3>
-            <p>Explora el fascinante mundo de la animación. Aquí encontrarás contenido multimedia relacionado con viajes espaciales.</p>
+            <div class="card"><p>Explora el fascinante mundo de la animación. Aquí encontrarás contenido multimedia relacionado con viajes espaciales.</p></div>
+            <div class="card">
+                <span class="text-justify">La animación es el proceso de crear la ilusión de movimiento mediante
+                    la visualización de una secuencia de imágenes fijas en rápida sucesión. Estas imágenes,
+                    conocidas como fotogramas, se muestran a una velocidad que da la impresión de movimiento continuo.
+                    Las animaciones pueden ser 2D o 3D y se utilizan en diversas aplicaciones, desde dibujos animados y
+                    videojuegos hasta simulaciones y efectos especiales en películas.</span>
+            </div>
             <div class="video-container">
                 <video width="100%" height="400px" controls>
                     <source src="Spacetravel.mp4" type="video/mp4">
@@ -41,9 +55,17 @@
             </div>
         </div>
 
-        <div class="card card-video" id="video">
+        <div class="card card-video fade" id="video">
             <h3><i class="fas fa-video"></i> Video</h3>
-            <p>Sumérgete en nuestro contenido de video. Disfruta de la vibrante música de "Samba do Amigo".</p>
+            <div class="card">
+                <p>Sumérgete en nuestro contenido de video. Disfruta de la vibrante música de "Samba do Amigo".</p>
+            </div>
+            <div class="card">
+                <span class="text-justify">El video es una tecnología que captura, transmite y reproduce imágenes en movimiento.
+                    A diferencia de la animación, que crea movimiento a partir de imágenes estáticas, el video graba secuencias de imágenes en movimiento utilizando cámaras. El contenido de video puede incluir películas, programas de televisión, clips musicales, 
+                    y grabaciones de eventos en vivo, y se reproduce en pantallas de diversos tamaños para entretenimiento,
+                    educación y comunicación.</span>
+            </div>
             <div class="video-container">
                 <video width="100%" height="400px" controls>
                     <source src="Videoi.mp4" type="video/mp4">
@@ -52,9 +74,14 @@
             </div>
         </div>
 
-        <div class="card card-visita" id="visita">
+        <div class="card card-visita fade" id="visita">
             <h3><i class="fas fa-vr-cardboard"></i> Visita Virtual</h3>
-            <p>Realiza una visita virtual a lugares increíbles. Aquí puedes encontrar un tour virtual interactivo.</p>
+            <div class="card">
+                <p>Realiza una visita virtual a lugares increíbles. Aquí puedes encontrar un tour virtual interactivo.</p>
+            </div>
+            <div class="card">
+                <span class="text-justify">Una visita virtual es una experiencia digital que permite a los usuarios explorar un lugar o un entorno de manera interactiva desde cualquier lugar del mundo. Mediante imágenes panorámicas, videos en 360 grados o entornos generados por computadora, las visitas virtuales ofrecen una experiencia inmersiva y detallada de sitios como museos, propiedades inmobiliarias o atracciones turísticas. Estas visitas suelen ser accesibles a través de dispositivos como computadoras, tabletas o visores de realidad virtual.</span>
+            </div>
             <div class="video-container">
                 <video width="100%" height="400px" controls>
                     <source src="video3.mp4" type="video/mp4">
@@ -63,19 +90,23 @@
             </div>
         </div>
 
-        <div class="card card-contacto contact-section" id="contacto">
+        <div class="card card-contacto contact-section fade" id="contacto">
             <h3><i class="fas fa-paper-plane"></i> Formulario de Contacto</h3>
+            <div class="card">
+                <p>Si disfrutaste de la experiencia, no olvides dejar tus comentarios :)</p>
+            </div>
+
             <form id="contactForm">
                 <div class="form-group">
-                    <label for="name">Nombre</label>
+                    <label for="name"></label>
                     <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
+                    <label for="email"></label>
                     <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Mensaje</label>
+                    <label for="message"></label>
                     <textarea class="form-control" id="message" rows="3" placeholder="Ingresa tu mensaje" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
@@ -93,35 +124,29 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita el envío del formulario tradicional
-    
-            // Recolecta los datos del formulario
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-    
-            // Envía los datos a Google Sheets
-            fetch('https://script.google.com/macros/s/AKfycbwoJNhq9J-crHfSbuY-L_roDJffmflDuWIX459x085osI2cvXeHx7HRwR63PxnbpkQwcQ/exec', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    message: message
-                })
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert('¡Formulario enviado con éxito!');
-            })
-            .catch(error => {
-                console.error('Error:', error);
+        function showSection(sectionId) {
+            // Primero ocultar todos los cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.remove('show');
             });
-        });
+
+            // Mostrar el card seleccionado con fade
+            const section = document.getElementById(sectionId);
+            section.classList.add('show');
+        }
+
+        function showAllSections() {
+            // Mostrar todos los cards con fade
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.add('show');
+            });
+        }
     </script>
-    
+
 </body>
 </html>
+
+
+
+
+<script src="bd.js"></script>

@@ -139,8 +139,16 @@ body {
     z-index: 1;
 }
 
+.carta {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f4f4f9;
+    z-index: 1;
+}
+
 .card-animacion {
-    background-color: #6c757d;
+    background-color: #FF8C00;
     
 }
 
@@ -190,3 +198,11 @@ body {
     padding: 10px;
     z-index: 1;
 }
+
+    .fade {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .fade.show {
+        opacity: 1;
+    }
